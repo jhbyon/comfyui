@@ -33,7 +33,7 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-	"https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v3%20(SFW)%20beta-inpainting.safetensors"
+	"https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v3.safetensors"
 )
 
 UNET_MODELS=(
