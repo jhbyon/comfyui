@@ -19,17 +19,21 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/cubiq/ComfyUI_essentials"
+	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux"
-	"https://github.com/jags111/efficiency-nodes-comfyui"
+	"https://github.com/storyicon/comfyui_segment_anything"
+	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+	"https://github.com/ltdrdata/ComfyUI-Manager"
+	"https://github.com/EllangoK/ComfyUI-post-processing-nodes"
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
-	"https://github.com/cubiq/ComfyUI_InstantID"
-	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+	"https://github.com/mcmonkeyprojects/sd-dynamic-thresholding"
+	"https://github.com/Stability-AI/stability-ComfyUI-nodes"	
+
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/gingerlollipopdx/ModelsXL/resolve/main/dreamshaperXL_lightningDPMSDE.safetensors?download=true"
+	"https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v3%20(SFW)%20beta-inpainting.safetensors"
 )
 
 UNET_MODELS=(
@@ -53,29 +57,47 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
-    "https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_normal-fp16.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_color-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_depth-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_keypose-fp16.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
-	"https://huggingface.co/SargeZT/controlnet-sd-xl-1.0-depth-16bit-zoe/resolve/main/depth-zoe-xl-v1.0-controlnet.safetensors"
-	"https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
-	#change above name from diffusion_pytorch_model.safetensors to instantid-controlnet.safetensors
+	"https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors"
+	"https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_openpose_fp16.safetensors"
+)
+
+CLIPVISION_MODELS=(
+	"https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/model.safetensors"
+)
+
+GROUNDINGDINO_MODELS=(
+	"https://huggingface.co/alexgenovese/background-workflow/resolve/1cbf8c24aa8a2e8d5ca6871800442b35ff6f9d48/groundingdino_swint_ogc.pth"
+)
+
+SAMS_MODELS=(
+	"https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
+	"https://huggingface.co/spaces/abhishek/StableSAM/resolve/main/sam_vit_h_4b8939.pth"
+)
+
+ULTRALYTICS_BBOX_MODELS=(
+	
+	"https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8m.pt"
+	"https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov8s.pt"
+)
+
+ULTRALYTICS_SEGM_MODELS=(
+
+	"https://huggingface.co/Bingsu/adetailer/resolve/main/person_yolov8m-seg.pt"
+)
+
+UPSCALE_MODELS=(
+
+	"https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
+)
+
+
+VAEAPPROX_MODELS=(
+
+	"https://github.com/madebyollin/taesd/raw/main/taesd_decoder.pth"
+	"https://github.com/madebyollin/taesd/raw/refs/heads/main/taesd_encoder.pth"
+	"https://github.com/madebyollin/taesd/raw/main/taesdxl_decoder.pth"
+	"https://github.com/madebyollin/taesd/raw/refs/heads/main/taesdxl_encoder.pth"
+	
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -109,6 +131,30 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/grounding-dino" \
+        "${GROUNDINGDINO_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/sams" \
+        "${SAMS_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm" \
+        "${ULTRALYTICS_SEGM_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/vae_approx" \
+        "${VAEAPPROX_MODELS[@]}"		
     provisioning_print_end
 }
 
