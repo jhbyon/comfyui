@@ -116,6 +116,21 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm" \
+        "${ULTRALYTICS_SEGM_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/vae_approx" \
+        "${VAEAPPROX_MODELS[@]}"	
+		
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
         "${UNET_MODELS[@]}"
@@ -142,19 +157,7 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/sams" \
         "${SAMS_MODELS[@]}"
 		
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox" \
-        "${ULTRALYTICS_BBOX_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm" \
-        "${ULTRALYTICS_SEGM_MODELS[@]}"
-		
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/upscale_models" \
-        "${UPSCALE_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/vae_approx" \
-        "${VAEAPPROX_MODELS[@]}"		
+	
     provisioning_print_end
 }
 
