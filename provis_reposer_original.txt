@@ -29,6 +29,13 @@ NODES=(
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 	"https://github.com/mcmonkeyprojects/sd-dynamic-thresholding"
 	"https://github.com/Stability-AI/stability-ComfyUI-nodes"	
+	
+	"https://github.com/ali1234/comfyui-job-iterator"
+	"https://github.com/Nourepide/ComfyUI-Allor"
+	"https://github.com/chrisgoringe/cg-use-everywhere"
+	"https://github.com/Ttl/ComfyUi_NNLatentUpscale"
+	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+	"https://github.com/chrisgoringe/cg-use-everywhere"
 
 )
 
