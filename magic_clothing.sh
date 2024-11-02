@@ -22,7 +22,6 @@ NODES=(
 
 
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
-	"https://github.com/frankchieng/ComfyUI_MagicClothing"
 
 
 )
