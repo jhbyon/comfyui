@@ -19,13 +19,11 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-	"https://github.com/Fannovel16/comfyui_controlnet_aux"
-	"https://github.com/ltdrdata/ComfyUI-Manager"
-	"https://github.com/EllangoK/ComfyUI-post-processing-nodes"
-	"https://github.com/frankchieng/ComfyUI_MagicClothing"
+
+
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
-	"https://github.com/Stability-AI/stability-ComfyUI-nodes"	
+	"https://github.com/frankchieng/ComfyUI_MagicClothing"
+
 
 )
 
