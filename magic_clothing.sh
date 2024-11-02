@@ -21,21 +21,11 @@ PIP_PACKAGES=(
 NODES=(
 	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux"
-	"https://github.com/storyicon/comfyui_segment_anything"
-	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
 	"https://github.com/ltdrdata/ComfyUI-Manager"
 	"https://github.com/EllangoK/ComfyUI-post-processing-nodes"
+	"https://github.com/frankchieng/ComfyUI_MagicClothing"
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
-	"https://github.com/mcmonkeyprojects/sd-dynamic-thresholding"
 	"https://github.com/Stability-AI/stability-ComfyUI-nodes"	
-	
-	"https://github.com/ali1234/comfyui-job-iterator"
-	"https://github.com/Nourepide/ComfyUI-Allor"
-	"https://github.com/chrisgoringe/cg-use-everywhere"
-	"https://github.com/Ttl/ComfyUi_NNLatentUpscale"
-	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-	"https://github.com/chrisgoringe/cg-use-everywhere"
 
 )
 
@@ -48,7 +38,9 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plus_sd15_lora.safetensors"
+	"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sd15_lora.safetensors"
+	"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15_lora.safetensors"
 )
 
 VAE_MODELS=(
@@ -102,12 +94,18 @@ UPSCALE_MODELS=(
 
 VAEAPPROX_MODELS=(
 
-	"https://github.com/madebyollin/taesd/raw/main/taesd_decoder.pth"
-	"https://github.com/madebyollin/taesd/raw/refs/heads/main/taesd_encoder.pth"
-	"https://github.com/madebyollin/taesd/raw/main/taesdxl_decoder.pth"
-	"https://github.com/madebyollin/taesd/raw/refs/heads/main/taesdxl_encoder.pth"
+
+)
+
+
+IPADAPTER_MODELS=(
+
+	"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plus_sd15.bin"
+	"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sd15.bin"
+	"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sd15.bin"
 	
 )
+
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
@@ -165,6 +163,10 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/sams" \
         "${SAMS_MODELS[@]}"
+		
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ipadapter" \
+        "${IPADAPTER_MODELS[@]}"
 		
 	
     provisioning_print_end
